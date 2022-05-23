@@ -10,3 +10,5 @@
 - `__repr__` method is a built-in t oget the string representation of the object for inspection
     - If we didn't implement this in a class, a class instance would look weird when shown in console
     - Example: `<Vector object at 0x10e100070>`
+- By default, instances of user-defined classes are truthy, unless `__bool__` or `__len__` are implemented. 
+    - If `__bool__` not implemented (so `bool(<instance>)` doesn't work), Python tries to evoke `len(<instance>)`, and if that size is zero, returns `False` (else `True`).
