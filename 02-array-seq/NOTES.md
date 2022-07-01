@@ -72,3 +72,11 @@ See `named_tuples_example.py`. Basically if you define a class name and a list o
 - `_fields` is a tuple with the field names of the class
 - `_make()` allows you to instantiate a named tuple from an iterable (`City(*delhi_data)` would do the same)
 
+### Slicing
+It's possible to name your slices like `SKU = slice(0, 6)` and then use those as replacements for the `X:Y:Z` nomenclature of slicing. 
+```
+>>> item[SKU] 
+```
+(similar to `item[0:6]`)
+
+Look into using ellipsis in slice objects - in NumPy it's a shortcut for grabbing "all" (i.e. `:`) for the other dimesions (since sometimes more than 2D).
