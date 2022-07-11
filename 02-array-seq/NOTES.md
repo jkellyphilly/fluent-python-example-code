@@ -80,3 +80,6 @@ It's possible to name your slices like `SKU = slice(0, 6)` and then use those as
 (similar to `item[0:6]`)
 
 Look into using ellipsis in slice objects - in NumPy it's a shortcut for grabbing "all" (i.e. `:`) for the other dimesions (since sometimes more than 2D).
+
+- Mutable sequences can be graftted, excised, and otherwise modified in place using slice notation. See `slice_examples.py`
+- So, `l[2:5] = [20, 30]` is replacing elements 2-4 (5 not included) in `l` with an iterable of `[20, 30]`
