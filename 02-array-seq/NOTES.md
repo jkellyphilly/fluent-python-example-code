@@ -83,3 +83,8 @@ Look into using ellipsis in slice objects - in NumPy it's a shortcut for grabbin
 
 - Mutable sequences can be graftted, excised, and otherwise modified in place using slice notation. See `slice_examples.py`
 - So, `l[2:5] = [20, 30]` is replacing elements 2-4 (5 not included) in `l` with an iterable of `[20, 30]`
+
+### Building a list of lists
+Woah - this is cool. Look at the example of `list_of_lists_example.py`
+
+TLDR - using a listcomp actually does what we want, becuase each list generated in the listcomp is treated like a local variable. If we use `*` with a sequence - it is the same sequence duplicated multiple times. 
