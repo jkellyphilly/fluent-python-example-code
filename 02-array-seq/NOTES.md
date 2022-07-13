@@ -88,3 +88,5 @@ Look into using ellipsis in slice objects - in NumPy it's a shortcut for grabbin
 Woah - this is cool. Look at the example of `list_of_lists_example.py`
 
 TLDR - using a listcomp actually does what we want, becuase each list generated in the listcomp is treated like a local variable. If we use `*` with a sequence - it is the same sequence duplicated multiple times. 
+
+NOTE: `id()` is a method to get the ID of a variable. If you use `*=` on a mutable sequence, the variable has the same `id` before and after the operation. HOWEVER, if you use it on an immutable sequence, a new object is produced (different `id`s). 
